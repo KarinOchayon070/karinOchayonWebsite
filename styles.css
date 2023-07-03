@@ -69,25 +69,21 @@ span{
 
 .homeContainer{
     /* max-width: 600px; */
-    /* display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 20px; */
+    display: flex;
+}
 
-    display: grid;
-    grid-template-columns: 70% 30%; /* Adjust the grid-template-columns to allocate 70% width for the text and 30% for the image */
-    gap: 20px;
-    
+.homeContentText{
+    display: flex;
+    flex-direction: column;
 }
 
 .homeContainer h1{
     font-weight: 700;
-    
 }
 
 .changeText{
     font-size: 1.5rem;
     font-weight: 600;
-    grid-column: 1;
 }
 
 .changeText h3{
@@ -125,10 +121,9 @@ span{
 
 .HomeP{
     line-height: 1.6;
-    grid-column: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
     .changeText {
         flex-direction: column;
         align-items: flex-start;
@@ -139,11 +134,16 @@ span{
         margin-bottom: 10px;
         font-size: 20px;
     }
+
+    .homeContainer{
+        flex-direction: column;
+    }
+
+   
 }
 
 .myImage{
-    max-width: 100%;
-    height: auto;
-    grid-column: 2;
-    /* grid-row: 1; */
+    max-width: 400px;
+    height: 400px;
+    flex-wrap: wrap; 
 }
