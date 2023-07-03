@@ -1,0 +1,51 @@
+body{
+    /* background-color: aqua; */
+    color: black;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Moirai One', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ===== Header Styling ===== */
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    flex-wrap: wrap;
+}
+
+.myName{
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+span{
+    color: rebeccapurple;
+}
+
+.navBar{
+    display: flex;
+    
+}
+
+.navBar a:hover{
+    color: brown;
+}
+
+.navBarItem{
+    list-style: none;
+    padding: 10px;
+}
+
+.menuIcon{
+    width: 50px;
+}
+
+#menuIcon{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
