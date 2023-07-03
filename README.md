@@ -12,7 +12,7 @@ With a clean and user-friendly interface, the website reflects my personality an
 
 ## Get in Touch
 If you're looking for a team player who can code with a smile, feel free to reach out to me at karinoch070@gmail.com.
-You can also connect with me on [LinkedIn](https://www.linkedin.com/in/karinochayon/) or check out my projects on [GitHub](https://github.com/KarinOchayon070) and [YouTube] (https://www.youtube.com/channel/UCB9kY-eCAMy0yonJmgCUU2Q).
+You can also connect with me on [LinkedIn](https://www.linkedin.com/in/karin-ochayon-%D7%A7%D7%90%D7%A8%D7%99%D7%9F-%D7%90%D7%95%D7%97%D7%99%D7%95%D7%9F-873785201/) or check out my projects on [GitHub](https://github.com/KarinOchayon070) and [YouTube](https://www.youtube.com/channel/UCB9kY-eCAMy0yonJmgCUU2Q).
 
 Let's code, laugh, and enjoy a cup of coffee together as we create amazing software solutions. Looking forward to connecting with you!
 
