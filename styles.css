@@ -1,10 +1,15 @@
+/* ===== General ===== */
+
 body{
-    /* background-color: aqua; */
     color: black;
     font-family: 'Libre Baskerville', serif;
     font-family: 'Moirai One', cursive;
     font-family: 'Open Sans', sans-serif;
+    padding: 20px 10%;
+
 }
+
+/* ===== End Of General ===== */
 
 
 /* ===== Header Styling ===== */
@@ -13,7 +18,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10%;
+    /* padding: 20px 10%; */
     flex-wrap: wrap;
 }
 
@@ -33,7 +38,7 @@ span{
 }
 
 .navBar a:hover{
-    color: brown;
+    color: rebeccapurple;
 }
 
 .navBarItem{
@@ -41,11 +46,104 @@ span{
     padding: 10px;
 }
 
-.menuIcon{
-    width: 50px;
+#menuIcon{
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
 }
 
-#menuIcon{
-    font-size: 1.8rem;
-    cursor: pointer;
+@media screen and (max-width: 750px) {
+    #menuIcon{
+        display: block !important;
+    }
+    .navBarItem{
+        display: none;
+    }
+}
+
+/* ===== End Of Header Styling ===== */
+
+
+/* ===== Home Section ===== */
+
+
+.homeContainer{
+    /* max-width: 600px; */
+    /* display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px; */
+
+    display: grid;
+    grid-template-columns: 70% 30%; /* Adjust the grid-template-columns to allocate 70% width for the text and 30% for the image */
+    gap: 20px;
+    
+}
+
+.homeContainer h1{
+    font-weight: 700;
+    
+}
+
+.changeText{
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-column: 1;
+}
+
+.changeText h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+
+.changeText h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+.changeText h3 .word .letter{
+    transform-origin: center center 25px;
+}
+
+.changeText h3 .word .letter{
+    transform-origin: center center 25px;
+}
+
+.changeText h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.changeText h3 .word .letter.in{
+    transition: 0.38s ease;
+}
+
+.changeText h3 .word .letter.behind{
+    transform: rotateX(-90deg);
+}
+
+.HomeP{
+    line-height: 1.6;
+    grid-column: 1;
+}
+
+@media (max-width: 768px) {
+    .changeText {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .changeText h3 {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+}
+
+.myImage{
+    max-width: 100%;
+    height: auto;
+    grid-column: 2;
+    /* grid-row: 1; */
 }
