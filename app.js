@@ -95,7 +95,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyECJI514UyezzXvDtGdO
         setTimeout(function(){
             msg.innerHTML = ""
         }, 5000)
-    //   form.reset()
+      form.reset()
         })
       .catch(error => {
         console.log({error})
