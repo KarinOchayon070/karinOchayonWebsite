@@ -45,3 +45,25 @@ let changeText = function(){
 
 changeText();
 setInterval(changeText, 4000);
+
+
+//  The code initializes variables to store tab links and tab contents, and defines a function openTab
+// that handles tab switching based on user interaction.
+let tabLinks = [...document.getElementsByClassName("tabLinks")];
+let tabContents = [...document.getElementsByClassName("tabContents")];
+console.log(tabContents);
+
+function openTab(event, tabName) {
+    event.preventDefault(); // Prevent the default behavior of the click event
+
+    for (tabLink of tabLinks) {
+        tabLink.classList.remove("activeLink");
+    }
+
+    for (tabContent of tabContents) {
+        tabContent.classList.remove("activeTab");
+    }
+
+    event.currentTarget.classList.add("activeLink");
+    document.getElementById(tabName).classList.add("activeTab");
+}
