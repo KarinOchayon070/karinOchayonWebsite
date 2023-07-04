@@ -82,21 +82,23 @@ function closeMenue(){
 
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzq3jrY_QVq4jsnw1JtBskf-gAWmmgURrwOwsPlk8GkPBPhxenC13DWfQn-l_oj81Y47g/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyECJI514UyezzXvDtGdOamWo2WaalcFa0__NNGmaM_ecGrO7qTsiKKn6x-efX5sxfkrg/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg");
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch(scriptURL, { method: 'POST', body: new FormData(form), redirect: "follow"})
       .then(response => {
+        console.log({response})
         msg.innerHTML = "Thank you! Message sent successfully."
         setTimeout(function(){
             msg.innerHTML = ""
         }, 5000)
-      form.reset()
+    //   form.reset()
         })
       .catch(error => {
+        console.log({error})
         msg.innerHTML = "Oh oh! Something went worng, message didn't sent."
         setTimeout(function(){
             msg.innerHTML = ""

@@ -36,6 +36,10 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px 10%;
 }
 
 .logo{
@@ -220,6 +224,7 @@ nav ul li a:hover::after{
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
+    transition: 0.35s ease-in-out;
 }
 
 .servicesList div i{
