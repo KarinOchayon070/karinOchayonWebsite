@@ -17,14 +17,16 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" alt="logo" class="logo">
-                <ul>
+                <ul id="sideMenu">
                     <li class="navBarItem"><a href="#home">Home</a></li>
                     <li class="navBarItem"><a href="#about">About</a></li>
                     <li class="navBarItem"><a href="#services">Services</a></li>
                     <li class="navBarItem"><a href="#skills">Skills</a></li>
                     <li class="navBarItem"><a href="#portfolio">Portfolio</a></li>
                     <li class="navBarItem"><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenue()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openMenue()"></i>
             </nav>
             <div class="headerText">
                 <h1>Hi! I'm Karin Ochayon</h1>
@@ -213,12 +215,13 @@
                     <a href="Karin Ochayon CV.docx" download class="button">Download My CV</a>
                 </div>
                 <div class="contactRight">
-                    <form>
-                        <input type="text" name="nav" placeholder="Your Name" required>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows=6 placeholder="Your Message"></textarea>
                         <button type="submit" class="button formButton">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>

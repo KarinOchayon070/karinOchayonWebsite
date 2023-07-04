@@ -13,6 +13,10 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* ======================================== Header ======================================== */
 
 #header{
@@ -391,8 +395,82 @@ footer{
     background: #44dfe8;
 }
 
+
+
+
+#msg{
+    color: #00ADB5;
+    margin-top: -40px;
+    display: block;
+}
 /* ======================================== Small Screens ======================================== */
 
+
+nav .fa-solid{
+    display: none;
+}
+
 @media only screen and (max-width: 600px){
+
+
+    .headerText{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .headerText h1{
+        font-size: 30px;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #44dfe8;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .subTitle{
+        font-size: 40px;
+    }
+
+    .aboutCol1, .aboutCol2{
+        flex-basis: 100%;
+    }
+
+    .aboutCol1{
+        margin-bottom: 30px;
+    }
+
+    .aboutCol2{
+        font-size: 14px;
+    }
+
+    .tabLinks{
+        font-size: 16px;
+        margin-right: 20px;
+
+    }
 
 }

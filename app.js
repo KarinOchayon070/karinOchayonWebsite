@@ -67,3 +67,42 @@ function openTab(event, tabName) {
     event.currentTarget.classList.add("activeLink");
     document.getElementById(tabName).classList.add("activeTab");
 }
+
+
+let sideMenu = document.getElementById("sideMenu");
+
+
+function openMenue(){
+    sideMenu.style.right = "0";
+}
+
+function closeMenue(){
+    sideMenu.style.right = "-200px";
+}
+
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzq3jrY_QVq4jsnw1JtBskf-gAWmmgURrwOwsPlk8GkPBPhxenC13DWfQn-l_oj81Y47g/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Thank you! Message sent successfully."
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+      form.reset()
+        })
+      .catch(error => {
+        msg.innerHTML = "Oh oh! Something went worng, message didn't sent."
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+      form.reset()
+        })
+  })
+
+
