@@ -1,8 +1,13 @@
+/* When the user clicks on the "Download My CV" link, the playAudio() function will be triggered,
+   and the audio file will start playing
+*/
+
 function playAudio() {
     var audio = document.getElementById("audio");
     audio.play();
 }
 
+// ============================================================================================================
 
 // This is the code for the changing text in the home section
 
@@ -24,9 +29,7 @@ words.forEach(function(word){
 
 let currentWordIndex = 0;
 let maxWordIndex = words.length-1;
-
 words[currentWordIndex].style.opacity = "1";
-
 
 let changeText = function(){
     let currentWord = words[currentWordIndex];
@@ -45,47 +48,42 @@ let changeText = function(){
             letter.className = "letter in";
         }, 340 + i*80);
     });
-
     currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
 }
-
 changeText();
 setInterval(changeText, 4000);
 
+// ============================================================================================================
 
-//  The code initializes variables to store tab links and tab contents, and defines a function openTab
-// that handles tab switching based on user interaction.
+
+/*  
+    The code initializes variables to store tab links and tab contents, and defines a function openTab
+    that handles tab switching based on user interaction
+*/
 let tabLinks = [...document.getElementsByClassName("tabLinks")];
 let tabContents = [...document.getElementsByClassName("tabContents")];
 console.log(tabContents);
 
 function openTab(event, tabName) {
     event.preventDefault(); 
-
     for (tabLink of tabLinks) {
         tabLink.classList.remove("activeLink");
     }
-
     for (tabContent of tabContents) {
         tabContent.classList.remove("activeTab");
     }
-
     event.currentTarget.classList.add("activeLink");
     document.getElementById(tabName).classList.add("activeTab");
 }
-
-
 let sideMenu = document.getElementById("sideMenu");
-
-
 function openMenue(){
     sideMenu.style.right = "0";
 }
-
 function closeMenue(){
     sideMenu.style.right = "-200px";
 }
 
+// ============================================================================================================
 
 // Transfer the data from the form to google sheet
 const scriptURL = 'https://script.google.com/macros/s/AKfycbywmUPajWzgFCFKUI5MjkCRQIbAWMTOMBoXJGOLqPQTDlrx-WQtvPQESZ2mvQr5Kc80vw/exec';
