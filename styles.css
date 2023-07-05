@@ -524,6 +524,43 @@ nav .fa-solid{
         align-items: center;
         justify-content: center;
     }
+    .layer{
+        font-size: 8px;
+    }
+
+    .layer h3{
+        font-size: 12px;
+    }
+    
+    .layer a{
+        font-weight: 100;
+        margin-bottom: 5px;
+        font-size: 18px;
+        
+    }
+
+    .aboutCol1, .aboutCol2{
+        flex-basis: 100%;
+    }
+
+    .aboutCol1{
+        margin-bottom: 30px;
+    }
+
+    .aboutCol2{
+        font-size: 14px;
+    }
+
+    .tabLinks{
+        font-size: 16px;
+        margin-right: 20px;
+
+    }
+
+    .tabContents ul li{
+        font-size: 14px;
+    }
+
   }
   
   
