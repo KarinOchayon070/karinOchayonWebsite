@@ -78,7 +78,7 @@ nav ul li a:hover::after{
     background-position: center;
 }
 
-.karinImageTransparentHoneSection{
+.karinImageTransparentHomeSection{
     height: 100%;
     width: 70%;
     padding-left: 10%;
@@ -296,7 +296,7 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 10px;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
@@ -308,7 +308,7 @@ nav ul li a:hover::after{
 }
 
 .layer a{
-    margin-top: 20px;
+    margin-top: 10px;
     color: #00ADB5;
     text-decoration: none;
     font-size: 18px;
@@ -525,6 +525,11 @@ nav .fa-solid{
         align-items: center;
         justify-content: center;
     }
+
+    .aboutCol1{
+        display: none;
+    }
+    
     .layer{
         font-size: 8px;
     }
@@ -536,8 +541,7 @@ nav .fa-solid{
     .layer a{
         font-weight: 100;
         margin-bottom: 5px;
-        font-size: 18px;
-        
+        font-size: 18px; 
     }
 
     .aboutCol1, .aboutCol2{
