@@ -487,6 +487,10 @@ nav .fa-solid{
       font-size: 40px;
     }
 
+    .aboutContainer{
+        margin-top: 50%;
+    }
+
     .aboutCol1{
         display: none;
     }
@@ -529,10 +533,6 @@ nav .fa-solid{
     .homeContainer{
         align-items: center;
         justify-content: center;
-    }
-
-    .aboutContainer{
-        margin-top: 50%;
     }
     
     .layer{
