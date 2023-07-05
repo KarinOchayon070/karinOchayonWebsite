@@ -444,7 +444,6 @@ nav .fa-solid{
 
 @media only screen and (max-width: 923px) {
 
-
     .homeContainer{
         flex-direction: column;
     }
@@ -488,7 +487,7 @@ nav .fa-solid{
     }
 
     .aboutContainer{
-        margin-top: 30%;
+        margin-top: 20%;
     }
 
     .aboutCol1{
@@ -531,8 +530,8 @@ nav .fa-solid{
     }
 
     .homeContainer{
-        align-items: center;
-        justify-content: center;
+        /* align-items: center;
+        justify-content: center; */
     }
     
     .layer{
