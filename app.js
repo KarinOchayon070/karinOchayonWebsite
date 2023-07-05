@@ -82,29 +82,32 @@ function closeMenue(){
 
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyECJI514UyezzXvDtGdOamWo2WaalcFa0__NNGmaM_ecGrO7qTsiKKn6x-efX5sxfkrg/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg");
+const scriptURL = 'https://script.google.com/macros/s/AKfycbywmUPajWzgFCFKUI5MjkCRQIbAWMTOMBoXJGOLqPQTDlrx-WQtvPQESZ2mvQr5Kc80vw/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form), redirect: "follow"})
-      .then(response => {
-        console.log({response})
-        msg.innerHTML = "Thank you! Message sent successfully."
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 5000)
-      form.reset()
-        })
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form),
+      mode: 'cors'
+    })
+      .then(response => response.text())
+      .then(data => {
+        console.log('Response from Google Sheets:', data);
+        msg.innerHTML = 'Thank you! Message sent successfully.';
+        setTimeout(() => {
+          msg.innerHTML = '';
+        }, 5000);
+        form.reset();
+      })
       .catch(error => {
-        console.log({error})
-        msg.innerHTML = "Oh oh! Something went worng, message didn't sent."
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 5000)
-      form.reset()
-        })
-  })
-
-
+        console.log({ error });
+        msg.innerHTML = "Oh oh! Something went wrong, the message wasn't sent.";
+        setTimeout(() => {
+          msg.innerHTML = '';
+        }, 5000);
+        form.reset();
+      });
+  });
