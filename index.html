@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +14,13 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
 <nav>
-    <a href="#header"><img src="images/logo.png" alt="logo" class="logo" href="#header"></a>
+    <a href="#header"><img src="images/logo.png" alt="logo" class="logo" href="#home"></a>
     <ul id="sideMenu">
-        <li class="navBarItem"><a href="#header">Home</a></li>
+        <li class="navBarItem"><a href="#home">Home</a></li>
         <li class="navBarItem"><a href="#about">About</a></li>
         <li class="navBarItem"><a href="#services">Services</a></li>
         <li class="navBarItem"><a href="#skills">Skills</a></li>
@@ -26,10 +30,11 @@
     </ul>
     <i class="fa-solid fa-bars" onclick="openMenue()"></i>
 </nav>
-<!--Header section-->
-    <div id="header">
-        <div class="container">
-            <div class="headerText">
+
+<!--Home section-->
+    <div id="home">
+        <div class="container homeContainer">
+            <div class="homeText">
                 <h1>Hi! I'm Karin Ochayon</h1>
                 <div class="changeText">
                     <h3>And I'm</h3>
@@ -40,25 +45,26 @@
                     </h3>
                 </div>
             </div>
+            <img src="./images/karinImageTransparentHoneSection.png" alt="karin image in home section" class="karinImageTransparentHoneSection">
         </div>
     </div>
+
 <!--About section-->
     <div id="about">
-        <div class="container">
+        <div class="container aboutContainer">
             <div class="row">
                 <div class="aboutCol1">
-                    <img src="images/karinImage.jpeg" alt="karin image in about me section">
+                    <img src="images/karinImageTransparentAboutSection.png" alt="karin image in about me section">
                 </div>
                 <div class="aboutCol2">
                     <h1 class="subTitle">About Me</h1>
                     <p>
-                        I have a strong passion for learning new technologies and believe in the power of clean and efficient code.
-                        But let's not forget the most important ingredient: hard work!
-                        When I'm not immersed in coding, you can find me hanging out with my favorite TV show characters-yes, I'm talking
-                        about the Friends series!
-                        I never miss an opportunity to catch up with Ross, Rachel, and the gang.
-                        And let's not forget about my other love-coffee!
-                        I believe it's the fuel that keeps the code flowing and the ideas brewing.   
+                        My name is Karin Ochayon, and I'm 23 years old from Rishon Le-Zion.<br>
+                        I recently graduated with a bachelor's degree in Computer Science from "HIT" with an average of 86.<br>
+                        Currently, I am enrolled in "The Complete 2023 Web Development Bootcamp" on Udemy to further enhance my web development skills.<br>
+                        I have a strong passion for learning new technologies and firmly believe in the power of clean and efficient code. Of course, hard work is the key ingredient!<br>
+                        When I'm not immersed in coding, you can find me enjoying the company of my favorite TV show characters-yes, I'm talking about the Friends series! I never miss an opportunity to catch up with Ross, Rachel, and the gang. <br>
+                        And let's not forget about my other love-coffee! I believe it's the fuel that keeps the code flowing and the ideas brewing.
                     </p>
                     <div class="tabTitles">
                         <p class="tabLinks activeLink" onclick="openTab(event, 'skills')">Skills</p>
@@ -68,25 +74,26 @@
                     <!-- Skills tab -->
                     <div class="tabContents activeTab" id="skills">
                         <ul>
-                            <li><span>Front-End Technologies</span><br>HTML, CSS, JS.</li>
-                            <li><span>Bacl-End Technologies</span><br>Node.js, Java, Python, C, C++.</li>
-                            <li><span>Database Management</span><br>Knowledge of both SQL (MySQL, SQLite) and NoSQL databases (MongoDB).</li>
-                            <li><span>Professional Skills</span><br>Teamwork and collaboration, Communication, Documentation, Continuous learning, Time management.</li>
+                            <li><span>Front-End Technologies</span><br>HTML | CSS | JS</li>
+                            <li><span>Bacl-End Technologies</span><br>Node.js | Java | Python | C | C++</li>
+                            <li><span>Database Management</span><br>Knowledge of both SQL (MySQL | SQLite) and NoSQL databases (MongoDB)</li>
+                            <li><span>Professional Skills</span><br>Teamwork and collaboration | Communication |Documentation | Continuous learning | Time management</li>
                         </ul>
                     </div>
                     <!-- Experience tab -->
                     <div class="tabContents" id="experience">
                         <ul>
-                            <li><span>2019-2022: Government Office</span><br>Prime minister's office Classified position in which I was responsible for producing an interactive picture for the senior decision-maker. The job also included gathering information from other security bodies in times of stress, using advanced technologies. </li>
+                            <li><span>2019-2022: Government Office</span><br>Prime minister's office Classified position in which I was responsible for producing an interactive picture for the senior decision-maker.<br>
+                                 The job also included gathering information from other security bodies in times of stress, using advanced technologies. </li>
                             <li><span>2017-2019: Military Service</span><br>"Unit Outside The Security Forces 1014" classified role in which, among other things, I have been authorized to collect data using advanced systems. </li>
                         </ul>
                     </div>
                     <!-- Education tab -->
                     <div class="tabContents" id="education">
                         <ul>
-                            <li><span>2020-2023</span><br>"HIT" - B.Sc, computer science. </li>
-                            <li><span>2020</span><br>"She Codes;" - Python and Git.</li>
-                            <li><span>2014-2017</span><br>"Amit Amal" high school - Full matriculation certificate with honors - 5 units in mathematics, English, communication and international relations.
+                            <li><span>2020-2023</span><br>"HIT" - B.Sc, computer science </li>
+                            <li><span>2020</span><br>"She Codes;" - Python and Git</li>
+                            <li><span>2014-2017</span><br>"Amit Amal" high school - Full matriculation certificate with honors - 5 units in mathematics, English, communication and international relations
                             </li>
                         </ul>
                     </div>
@@ -94,6 +101,7 @@
             </div>
         </div>
     </div>
+
     <!-- Services Section -->
     <div id="services">
         <div class="container">
@@ -112,12 +120,13 @@
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
-                    <h2>Graphic Design And Image And Video Editing</h2>
+                    <h2>Graphic Design; Image & Video Editing</h2>
                     <p>I excel in graphic design, allowing me to offer services such as logo design, branding, illustrations, and image editing. I can create visually captivating designs that align with your clients' branding guidelines and enhance their digital presence. Additionally, my proficiency in image and video editing enables me to enhance and manipulate visuals to meet specific requirements and deliver high-quality assets.</p>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
@@ -223,10 +232,11 @@
             </div>
         </div>
     </div>
+
     <!-- Contact Section -->
     <div id="contact">
         <div class="container">
-            <div class="row">
+            <div class="row contactContainer">
                 <div class="contactLeft">
                     <h1 class="subTitle">Contact Me</h1>
                     <p>
@@ -261,11 +271,13 @@
             </div>
         </div>
     </div>
+
     <!-- Footer Section -->
     <footer>
         <p>Ⓒ Karin Ochayon, 2023</p>
     </footer>
     <script src="app.js"></script>
+
 </body>
 </html>
 

@@ -54,7 +54,7 @@ let tabContents = [...document.getElementsByClassName("tabContents")];
 console.log(tabContents);
 
 function openTab(event, tabName) {
-    event.preventDefault(); // Prevent the default behavior of the click event
+    event.preventDefault(); 
 
     for (tabLink of tabLinks) {
         tabLink.classList.remove("activeLink");
@@ -81,7 +81,7 @@ function closeMenue(){
 }
 
 
-
+// Transfer the data from the form to google sheet
 const scriptURL = 'https://script.google.com/macros/s/AKfycbywmUPajWzgFCFKUI5MjkCRQIbAWMTOMBoXJGOLqPQTDlrx-WQtvPQESZ2mvQr5Kc80vw/exec';
 const form = document.forms['submit-to-google-sheet'];
 const msg = document.getElementById("msg");
