@@ -10,6 +10,8 @@ This repository contains the source code for my personal website, where you can 
 
 With a clean and user-friendly interface, the website reflects my personality and professional aspirations. It incorporates modern web development technologies such as HTML, CSS, and JavaScript to create an engaging and interactive experience.
 
+So come on what are you waiting for! Go take a look at my website at the following link - https://karinochayonswebsite.onrender.com.
+
 ## Get in Touch
 If you're looking for a team player who can code with a smile, feel free to reach out to me at karinoch070@gmail.com.
 You can also connect with me on [LinkedIn](https://www.linkedin.com/in/karin-ochayon-%D7%A7%D7%90%D7%A8%D7%99%D7%9F-%D7%90%D7%95%D7%97%D7%99%D7%95%D7%9F-873785201/) or check out my projects on [GitHub](https://github.com/KarinOchayon070) and [YouTube](https://www.youtube.com/channel/UCB9kY-eCAMy0yonJmgCUU2Q).
