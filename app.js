@@ -1,3 +1,9 @@
+function playAudio() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}
+
+
 // This is the code for the changing text in the home section
 
 // Find all the words that has the "word" class - this are the words i'm gonna change the text all the time
