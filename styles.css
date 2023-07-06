@@ -529,9 +529,8 @@ nav .fa-solid{
         font-size: 18px;
     }
 
-    .homeContainer{
-        /* align-items: center;
-        justify-content: center; */
+    .aboutContainer{
+        padding-top: 50%;
     }
     
     .layer{
