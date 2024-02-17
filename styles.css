@@ -583,6 +583,10 @@ nav .fa-solid {
 		font-size: 12px;
 	}
 
+	.layer p {
+		font-size: 8px;
+	}
+
 	.layer a {
 		font-weight: 100;
 		margin-bottom: 5px;
