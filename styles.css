@@ -1,646 +1,635 @@
 /* ======================================== General ======================================== */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;  
-  }
-  
-  body{
-      color: white;
-      background-color: black;
-      font-family: 'Libre Baskerville', serif;
-      font-family: 'Moirai One', cursive;
-      font-family: 'Open Sans', sans-serif;
-  }
-  
-  html{
-      scroll-behavior: smooth;
-  }
-  
-  nav{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      background-color: #00ADB5;
-      color: white;
-      padding: 10px 10%;
-      z-index: 999; 
-  }
-  
-  .logo{
-      width: 200px;
-  }
-  
-  nav ul li{
-      display: inline-block;
-      list-style: none;
-      margin: 10px 20px;
-  }
-  
-  nav ul li a{
-      color: white;
-      text-decoration: none;
-      font-size: 25px;
-      position: relative;
-  }
-  
-  nav ul li a::after{
-      content: "";
-      width: 0;
-      height: 3px;
-      background: black;
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      transition: 0.5s;
-  }
-  
-  nav ul li a:hover::after{
-      width: 100%;
-  }
-  
-  .container{
-      padding: 10px 10%;
-  }
-  
-  /* ======================================== Home ======================================== */
-  
-  #home{
-      width: 100%;
-      height: 100vh;
-      background-color: black;
-      background-size: cover;
-      background-position: center;
-  }
-  
-  .karinImageTransparentHomeSection{
-      height: 100vh;
-      width: 75%;
-      padding-left: 10px;
-      margin-top: 10%;
-  }
-  
-  .homeContainer{
-      display: flex;
-      height: 90vh;
-  }
-  
-  .homeText{
-      margin-top: 10%;
-      margin-right: 800px;
-      white-space: nowrap;
-  }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-    .name {
-    display: inline-block;
-    }
-  
-  .homeText h1{
-      margin-top: 20px;
-      font-size: 105px;
-      display: inline;
-  }
-  
-  .homeText h1 span{
-      color: #00ADB5;
-  }
-  
-  .changeText{
-      font-weight: 800;
-      font-size: 60px;
-      margin-top: 20px;
-  }
-  
-  .changeText h3{
-      display: inline-flex;
-      margin: 0;
-      vertical-align: top;
-  }
-  
-  .changeText h3 .word{
-      position: absolute;
-      display: flex;
-      opacity: 0;
-      color: #00ADB5;
-  }
-  
-  .changeText h3 .word .letter{
-      transform-origin: center center 25px;
-  }
-  
-  .changeText h3 .word .letter{
-      transform-origin: center center 25px;
-  }
-  
-  .changeText h3 .word .letter.out{
-      transform: rotateX(90deg);
-      transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
-  }
-  
-  .changeText h3 .word .letter.in{
-      transition: 0.38s ease;
-  }
-  
-  .changeText h3 .word .letter.behind{
-      transform: rotateX(-90deg);
-  } 
-  
-  /* ======================================== About ======================================== */
-  
-  #about{
-      padding: 80px 0;
-  }
-  
-  .row{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  }
-  
-  .aboutCol1{
-      flex-basis: 35%;
-  }
-  
-  .aboutCol1 img{
-      width: 100%;
-      border-radius: 15px;
-  }
-  
-  .aboutCol2{
-      flex-basis: 60%;
-  }
-  
-  .subTitle{
-      font-size: 60px;
-      font-weight: 600;
-      color: #00ADB5;
-  }
-  
-  .tabTitles{
-      display: flex;
-      margin: 20px 0 40px;
-  }
+body {
+	color: white;
+	background-color: black;
+	font-family: "Open Sans", sans-serif;
+}
 
-  .aboutParagraph{
-    font-size: 25px;
-  }
-  
-  .tabLinks{
-      margin-right: 50px;
-      font-size: 30px;
-      font-weight: 500;
-      cursor: pointer;
-      position: relative;
-  }
-  
-  .tabLinks::after{
-      content: "";
-      width: 0;
-      height: 3px;
-      background: #00ADB5;
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      transition: 0.5s;
-  }
-  
-  .tabLinks.activeLink::after{
-      width: 50%;
-  }
-  
-  .tabContents ul li{
-      list-style: none;
-      margin: 10px 0;
-      font-size: 25px;
-  }
-  
-  .tabContents ul li span{
-      color: #00ADB5;
-      font-size: 25px;
-  }
-  
-  .tabContents{
-      display: none; 
-  }
-  
-  .tabContents.activeTab{
-      display: block;
-  }
-  
-  /* ======================================== Services ======================================== */
-  
-  #services{
-      padding: 30px 0;
-  }
-  
-  .servicesList{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 40px;
-      margin-top: 50px;
-  }
-  
-  .servicesList div{
-      background-color: #00ADB5;
-      padding: 40px;
-      font-size: 25px;
-      font-weight: 300;
-      border-radius: 10px;
-      transition: 0.35s ease-in-out;
-  }
-  
-  .servicesList div i{
-      font-size: 50px;
-      margin-bottom: 30px;
-  }
-  
-  .servicesList div h2{
-      font-size: 30px;
-      font-weight: 500;
-      margin-bottom: 15px;
-  }
-  
-  .servicesList div:hover{
-      background: #44dfe8;
-      transform: translateY(-10px);
-  }
-  
-  /* ======================================== Portfolio ======================================== */
-  
-  #portfolio{
-      padding: 50px 0;
-  }
-  
-  .portfolioList{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 40px;
-      margin-top: 50px;
-  }
-  
-  .work{
-      border-radius: 10px;
-      position: relative;
-      overflow: hidden;
-  }
-  
-  .work img{
-      border-radius: 10px;
-      width: 100%;
-      height: 100%;
-      overflow: block;
-      transition: transform 0.5s;
-  }
-  
-  .layer{
-      width: 100%;
-      height: 0;
-      background: linear-gradient(rgba(0,0,0,0.6), #44dfe8);
-      border-radius: 10px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 0 10px;
-      text-align: center;
-      font-size: 20px;
-      transition: height 0.5s;
-  }
-  
-  .layer h3{
-      font-weight: 500;
-      margin-bottom: 20px;
-  }
-  
-  .layer a{
-      margin-top: 10px;
-      color: #00ADB5;
-      text-decoration: none;
-      font-size: 25px;
-      line-height: 60px;
-      width: 60px;
-      height: 60px;
-      background: white;
-      border-radius: 50%;
-      text-align: center;
-  }
-  
-  .work:hover img{
-      transform: scale(1.1);
-  }
-  
-  .work:hover .layer{
-      height: 100%;;
-  }
-  
-  /* ======================================== Contact ======================================== */
-  
-  .contactLeft{
-      flex-basis: 35%;
-  }
-  
-  .contactRight{
-      flex-basis: 60%;
-  }
-  
-  .contactLeft p{
-      margin-top: 30px;
-      font-size: 25px;
-  }
-  
-  .contactLeft a{
-      text-decoration: none;
-      color: white;
-  }
-  
-  .contactLeft p i{
-      color: #00ADB5;
-      margin-right: 15px;
-      font-size: 25px;
-  }
-  
-  .socialIcons{
-      margin-top: 30px;
-  }
-  
-  .socialIcons a{
-      text-decoration: none;
-      font-size: 90px;
-      margin-right: 15px;
-      color: #00ADB5;
-      display: inline-block;
-      transition: transform 0.5s;
-  }
-  
-  .socialIcons a:hover{
-      color: #44dfe8;
-      transform: translateY(-5px);
-  }
-  
-  .button{
-     margin: 50px auto;
-     width: fit-content;
-     border: 1px solid #00ADB5;
-     padding: 14px 50px;
-     border-radius: 6px;
-     display: inline-block; 
-     background: #00ADB5;
-     color: white;
-     transition: transform 0.5s;
-     font-size: 18px;
-     font-weight: bold;
-  }
-  
-  .button:hover {
-      color: #44dfe8;
-      transform: translateY(-5px);
-  }
-  
-  .contactRight form{
-      width: 100%;
-  }
-  
-  form input, form textarea{
-      width: 100%;
-      border: 0;
-      outline: none;
-      background: #00ADB5;
-      padding: 15px;
-      margin: 15px 0;
-      font-size: 18px;
-      border-radius: 6px;
-      color: white;
-      font-size: 25px;
-  }
-  
-  ::placeholder {
-      color: white;
-      opacity: 0.7;
-    }
-    
-  
-  .formButton{
-      padding: 14px 60px;
-      margin-top: 20px;
-      cursor: pointer;
-  }
-  
-  /* ======================================== Footer ======================================== */
-  
-  footer{
-      width: 100%;
-      text-align: center;
-      padding: 25px 0;
-      font-weight: 300;
-      background: #00ADB5;
-      color: white;
-  }
-  
-  
-  #msg{
-      color: #00ADB5;
-      margin-top: -40px;
-      display: block;
-  }
-  /* ======================================== Small Screens ======================================== */
-  
-  
-  nav .fa-solid{
-      display: none;
-  }
-  
-  @media only screen and (max-width: 923px) {
-  
-      .homeText{
-          margin-right: 0px;
-      }
-  
-      .homeText h1 {
-          font-size: 100px;
-      }
-    
-      h3 {
-          font-size: 35px;
-      }
-  
-      .homeContainer{
-          flex-direction: column;
-      }
-  
-      nav .fa-solid {
-        display: block;
-        font-size: 25px;
-      }
-    
-      nav {
-        z-index: 9999;
-      }
-    
-      nav ul {
-        background: #00ADB5;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        min-height: 100vh;
-        padding-top: 50px;
-        z-index: 9999; /* Increase the z-index value even more */
-        transition: right 0.5s;
-      }
-    
-      nav ul li {
-        display: block;
-        margin: 25px;
-      }
-    
-      nav ul .fa-solid {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-        z-index: 9999; /* Ensure the icon stays on top */
-      }
-    
-      .subTitle {
-        font-size: 40px;
-      }
-  
-      .aboutContainer{
-          margin-top: 50%;
-      }
-  
-      .aboutCol1{
-          display: none;
-      }
-    
-      #portfolio .work {
-        position: relative;
-        z-index: 1; /* Decrease the z-index value of the portfolio images */
-      }
-  
-      .servicesList{
-          display: flex;
-          flex-direction: column;
-      }
-  
-      .portfolioList{
-          display: flex;
-          flex-direction: column;
-      }
-  
-      .layer{
-          font-size: 12px;
-      }
-  
-      .contactContainer{
-          display: flex;
-          flex-direction: column;
-      }
-    }
-    
-    /* Media query for small screens */
-  @media only screen and (max-width: 600px) {
+html {
+	scroll-behavior: smooth;
+}
 
-    nav ul li a{
-        font-size: 18px;
-    }
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: sticky;
+	top: 0;
+	background-color: #00adb5;
+	color: white;
+	padding: 10px 10%;
+	z-index: 999;
+}
 
-      .homeText{
-          margin-right: 0px;
-      }
-  
-      .homeText h1 {
-          font-size: 40px;
-      }
-    
-      h3 {
-          font-size: 15px;
-      }
-  
-      .homeContainer{
-          margin-bottom: 80px;
-      }
+.logo {
+	width: 200px;
+}
 
-      #about{
-        padding: 0;
-    }
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 20px;
+}
 
-    .aboutParagraph{
-      font-size: 14px;
-    }
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	position: relative;
+}
 
-    .activeTab ul li span{
-      font-size: 14px;
-    }
+nav ul li a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	background: black;
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	transition: 0.5s;
+}
 
-    .servicesList div h2 {
-        font-size: 20px;
-    }
-    
-    .servicesList div{
-        font-size: 14px;
-    }
+nav ul li a:hover::after {
+	width: 100%;
+}
 
-      
-      .layer{
-          font-size: 8px;
-      }
-  
-      .layer h3{
-          font-size: 12px;
-      }
-      
-      .layer a{
-          font-weight: 100;
-          margin-bottom: 5px;
-          font-size: 18px; 
-      }
-  
-      .aboutCol1, .aboutCol2{
-          flex-basis: 100%;
-      }
-  
-      .aboutCol1{
-          margin-bottom: 30px;
-      }
-  
-      .aboutCol2{
-          font-size: 14px;
-      }
-  
-      .tabLinks{
-          font-size: 16px;
-          margin-right: 20px;
-  
-      }
-  
-      .tabContents ul li{
-          font-size: 14px;
-      }
+.container {
+	padding: 10px 10%;
+}
 
-      .contactLeft p {
-        font-size: 14px;
-      }
+/* ======================================== Home ======================================== */
 
-      .socialIcons a{
-        font-size: 50px;
-      }
+#home {
+	width: 100%;
+	height: 70vh;
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+}
 
-      .contactRight form{
-        font-size: 14px;
-      }
-      
-      form input, form textarea{
-        font-size: 14px;
-      }
-  
-    }
-    
+.homeContainer {
+	display: flex;
+    justify-content: space-between;
+}
+
+.homeText {
+	margin-top: 10%;
+	white-space: nowrap;
+}
+
+.name {
+	display: inline-block;
+}
+
+.homeText h1 {
+	margin-top: 20px;
+	font-size: 90px;
+	display: inline;
+}
+
+.homeText h1 span {
+	color: #00adb5;
+}
+
+.changeText {
+	font-weight: 800;
+	font-size: 35px;
+	margin-top: 20px;
+}
+
+.changeText h3 {
+	display: inline-flex;
+	margin: 0;
+	vertical-align: top;
+}
+
+.changeText h3 .word {
+	position: absolute;
+	display: flex;
+	opacity: 0;
+	color: #00adb5;
+}
+
+.changeText h3 .word .letter {
+	transform-origin: center center 22px;
+}
+
+.changeText h3 .word .letter {
+	transform-origin: center center 22px;
+}
+
+.changeText h3 .word .letter.out {
+	transform: rotateX(90deg);
+	transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.changeText h3 .word .letter.in {
+	transition: 0.38s ease;
+}
+
+.changeText h3 .word .letter.behind {
+	transform: rotateX(-90deg);
+}
+
+/* ======================================== About ======================================== */
+
+#about {
+	padding: 80px 0;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.aboutCol1 {
+	flex-basis: 35%;
+}
+
+.aboutCol1 img {
+	width: 100%;
+	border-radius: 15px;
+}
+
+.aboutCol2 {
+	flex-basis: 60%;
+}
+
+.subTitle {
+	font-size: 60px;
+	font-weight: 600;
+	color: #00adb5;
+}
+
+.tabTitles {
+	display: flex;
+	margin: 20px 0 40px;
+}
+
+.aboutParagraph {
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.tabLinks {
+	margin-right: 50px;
+	font-size: 30px;
+	font-weight: 500;
+	cursor: pointer;
+	position: relative;
+}
+
+.tabLinks::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	background: #00adb5;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+}
+
+.tabLinks.activeLink::after {
+	width: 50%;
+}
+
+.tabContents ul li {
+	list-style: none;
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+.tabContents ul li span {
+	color: #00adb5;
+	font-size: 18px;
+}
+
+.tabContents {
+	display: none;
+}
+
+.tabContents.activeTab {
+	display: block;
+}
+
+/* ======================================== Services ======================================== */
+
+#services {
+	padding: 30px 0;
+}
+
+.servicesList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+
+.servicesList div {
+	background-color: #00adb5;
+	padding: 40px;
+	font-size: 18px;
+	font-weight: 300;
+	border-radius: 10px;
+	transition: 0.35s ease-in-out;
+}
+
+.servicesList div i {
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.servicesList div h2 {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
+.servicesList div:hover {
+	background: #44dfe8;
+	transform: translateY(-10px);
+}
+
+/* ======================================== Portfolio ======================================== */
+
+#portfolio {
+	padding: 50px 0;
+}
+
+.portfolioList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+
+.work {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.work img {
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	overflow: block;
+	transition: transform 0.5s;
+}
+
+.layer {
+	width: 100%;
+	height: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), #44dfe8);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 20px;
+	transition: height 0.5s;
+}
+
+.layer h3 {
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.layer p {
+	font-size: 10px;
+}
+
+.layer a {
+	margin-top: 10px;
+	color: #00adb5;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 60px;
+	width: 60px;
+	height: 60px;
+	background: white;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.work:hover img {
+	transform: scale(1.1);
+}
+
+.work:hover .layer {
+	height: 100%;
+}
+
+/* ======================================== Contact ======================================== */
+
+.contactLeft {
+	flex-basis: 35%;
+}
+
+.contactRight {
+	flex-basis: 60%;
+}
+
+.contactLeft p {
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+.contactLeft a {
+	text-decoration: none;
+	color: white;
+}
+
+.contactLeft p i {
+	color: #00adb5;
+	margin-right: 15px;
+	font-size: 18px;
+}
+
+.socialIcons {
+	margin-top: 30px;
+}
+
+.socialIcons a {
+	text-decoration: none;
+	font-size: 90px;
+	margin-right: 15px;
+	color: #00adb5;
+	display: inline-block;
+	transition: transform 0.5s;
+}
+
+.socialIcons a:hover {
+	color: #44dfe8;
+	transform: translateY(-5px);
+}
+
+.button {
+	margin: 50px auto;
+	width: fit-content;
+	border: 1px solid #00adb5;
+	padding: 14px 50px;
+	border-radius: 6px;
+	display: inline-block;
+	background: #00adb5;
+	color: white;
+	transition: transform 0.5s;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.button:hover {
+	color: #44dfe8;
+	transform: translateY(-5px);
+}
+
+.contactRight form {
+	width: 100%;
+}
+
+form input,
+form textarea {
+	width: 100%;
+	border: 0;
+	outline: none;
+	background: #00adb5;
+	padding: 15px;
+	margin: 15px 0;
+	font-size: 18px;
+	border-radius: 6px;
+	color: white;
+	font-size: 18px;
+}
+
+::placeholder {
+	color: white;
+	opacity: 0.7;
+}
+
+.formButton {
+	padding: 14px 60px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+/* ======================================== Footer ======================================== */
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 18px 0;
+	font-weight: 300;
+	background: #00adb5;
+	color: white;
+}
+
+#msg {
+	color: #00adb5;
+	margin-top: -40px;
+	display: block;
+}
+/* ======================================== Small Screens ======================================== */
+
+nav .fa-solid {
+	display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.homeText {
+		margin-right: 0px;
+	}
+
+	.homeText h1 {
+		font-size: 100px;
+	}
+
+	h3 {
+		font-size: 35px;
+	}
+
+	.homeContainer {
+		flex-direction: column;
+	}
+
+	nav .fa-solid {
+		display: block;
+		font-size: 25px;
+	}
+
+	nav {
+		z-index: 9999;
+	}
+
+	nav ul {
+		background: #00adb5;
+		position: fixed;
+		top: 0;
+		right: -200px;
+		width: 200px;
+		min-height: 100vh;
+		padding-top: 50px;
+		z-index: 9999; /* Increase the z-index value even more */
+		transition: right 0.5s;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 25px;
+	}
+
+	nav ul .fa-solid {
+		position: absolute;
+		top: 25px;
+		left: 25px;
+		cursor: pointer;
+		z-index: 9999; /* Ensure the icon stays on top */
+	}
+
+	.subTitle {
+		font-size: 40px;
+	}
+
+	.aboutContainer {
+		margin-top: 50%;
+	}
+
+	.aboutCol1 {
+		display: none;
+	}
+
+	#portfolio .work {
+		position: relative;
+		z-index: 1; /* Decrease the z-index value of the portfolio images */
+	}
+
+	.servicesList {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.portfolioList {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.layer {
+		font-size: 12px;
+	}
+
+	.contactContainer {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+	nav ul li a {
+		font-size: 18px;
+	}
+
+	.homeText {
+		margin-right: 0px;
+	}
+
+	.homeText h1 {
+		font-size: 40px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+
+	.homeContainer {
+		margin-bottom: 80px;
+	}
+
+	#about {
+		padding: 0;
+	}
+
+	.aboutParagraph {
+		font-size: 14px;
+	}
+
+	.activeTab ul li span {
+		font-size: 14px;
+	}
+
+	.servicesList div h2 {
+		font-size: 20px;
+	}
+
+	.servicesList div {
+		font-size: 14px;
+	}
+
+	.layer {
+		font-size: 8px;
+	}
+
+	.layer h3 {
+		font-size: 12px;
+	}
+
+	.layer a {
+		font-weight: 100;
+		margin-bottom: 5px;
+		font-size: 18px;
+	}
+
+	.aboutCol1,
+	.aboutCol2 {
+		flex-basis: 100%;
+	}
+
+	.aboutCol1 {
+		margin-bottom: 30px;
+	}
+
+	.aboutCol2 {
+		font-size: 14px;
+	}
+
+	.tabLinks {
+		font-size: 16px;
+		margin-right: 20px;
+	}
+
+	.tabContents ul li {
+		font-size: 14px;
+	}
+
+	.contactLeft p {
+		font-size: 14px;
+	}
+
+	.socialIcons a {
+		font-size: 50px;
+	}
+
+	.contactRight form {
+		font-size: 14px;
+	}
+
+	form input,
+	form textarea {
+		font-size: 14px;
+	}
+}

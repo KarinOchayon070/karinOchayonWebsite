@@ -1,286 +1,391 @@
 <!DOCTYPE html>
 
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Karin Ochayon's Website</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karin Ochayon's Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Moirai+One&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/ff1501f9a6.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-</head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Moirai+One&family=Open+Sans:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/ff1501f9a6.js" crossorigin="anonymous"></script>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-<body>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
 
-<!--Navbar is always shown-->
-<nav>
-    <a href="#home"><img src="images/logo.png" alt="logo" class="logo" href="#home"></a>
-    <ul id="sideMenu">
-        <li class="navBarItem"><a href="#home">Home</a></li>
-        <li class="navBarItem"><a href="#about">About</a></li>
-        <li class="navBarItem"><a href="#services">Services</a></li>
-        <li class="navBarItem"><a href="#skills">Skills</a></li>
-        <li class="navBarItem"><a href="#portfolio">Portfolio</a></li>
-        <li class="navBarItem"><a href="#contact">Contact</a></li>
-        <i class="fa-solid fa-xmark" onclick="closeMenue()"></i>
-    </ul>
-    <i class="fa-solid fa-bars" onclick="openMenue()"></i>
-</nav>
+	<body>
+		<!--Navbar is always shown-->
+		<nav>
+			<a href="#home"><img src="images/logo.png" alt="logo" class="logo" href="#home" /></a>
+			<ul id="sideMenu">
+				<li class="navBarItem"><a href="#home">Home</a></li>
+				<li class="navBarItem"><a href="#about">About</a></li>
+				<li class="navBarItem"><a href="#services">Services</a></li>
+				<li class="navBarItem"><a href="#skills">Skills</a></li>
+				<li class="navBarItem"><a href="#portfolio">Portfolio</a></li>
+				<li class="navBarItem"><a href="#contact">Contact</a></li>
+				<i class="fa-solid fa-xmark" onclick="closeMenue()"></i>
+			</ul>
+			<i class="fa-solid fa-bars" onclick="openMenue()"></i>
+		</nav>
 
-<!--Home section-->
-    <div id="home">
-        <div class="container homeContainer">
-            <div class="homeText">
-                <h1 class="name">Hi! I'm <span>Karin</span></h1>
-                <div class="changeText">
-                    <h3>And I'm</h3>
-                    <h3>
-                        <span class="word">Human</span>
-                        <span class="word">Computer&nbsp;Science&nbsp;Graduate&nbsp;,&nbsp;B.Sc&nbsp;</span>
-                        <span class="word">Junior&nbsp;Full&nbsp;Stack&nbsp;Developer</span>
-                    </h3>
-                </div>
-            </div>
-            <img src="./images/karinImages/karinImageTransparentHomeSection.png" alt="karin image in home section" class="karinImageTransparentHoneSection">
-        </div>
-    </div>
+		<!--Home section-->
+		<div id="home">
+			<div class="container homeContainer">
+				<div class="homeText">
+					<h1 class="name">Hi! I'm <span>Karin</span></h1>
+					<div class="changeText">
+						<h3>And I'm</h3>
+						<h3>
+							<span class="word">Human</span>
+							<span class="word">Computer&nbsp;Science&nbsp;Graduate&nbsp;,&nbsp;B.Sc&nbsp;</span>
+							<span class="word">Junior&nbsp;Full&nbsp;-&nbsp;Stack&nbsp;Developer</span>
+						</h3>
+					</div>
+				</div>
+				<img
+					src="./images/karinImages/karinImageTransparentAboutSection.png"
+					alt="karin image in home section"
+					class="karinImageTransparentHoneSection"
+				/>
+			</div>
+		</div>
 
-<!--About section-->
-    <div id="about">
-        <div class="container aboutContainer">
-            <div class="row">
-                <div class="aboutCol1">
-                    <img src="images/karinImages/karinImageTransparentAboutSection.png" alt="karin image in about me section">
-                </div>
-                <div class="aboutCol2">
-                    <h1 class="subTitle">About Me</h1>
-                    <p class="aboutParagraph">
-                        My name is Karin Ochayon, I'm 23 years old, from Rishon Le-Zion.<br>
-                        I'm a recent graduate with a Bachelor's degree in Computer Science from "HIT" (Holon Institute of Technology), where I achieved an average grade of 86.<br>
-                        I recently completed "The Complete 2023 Web Development Bootcamp" on Udemy, which has significantly enhanced my web development skills.<br>
-                        I have a strong passion for learning new technologies and firmly believe in the power of clean and efficient code. Of course, hard work is the key ingredient!<br>
-                        When I'm not immersed in coding, you can find me enjoying the company of my favorite TV show characters-yes, I'm talking about the Friends series! I never miss an opportunity to catch up with Ross, Rachel, and the gang. <br>
-                        And let's not forget about my other love-coffee! I believe it's the fuel that keeps the code flowing and the ideas brewing.
-                    </p>
-                    <div class="tabTitles">
-                        <p class="tabLinks activeLink" onclick="openTab(event, 'skills')">Skills</p>
-                        <p class="tabLinks" onclick="openTab(event, 'experience')">Experience</p>
-                        <p class="tabLinks" onclick="openTab(event, 'education')">Education</p>
-                    </div>
-                    <!-- Skills tab -->
-                    <div class="tabContents activeTab" id="skills">
-                        <ul>
-                            <li><span>Front-End Technologies</span><br>HTML | CSS | JS</li>
-                            <li><span>Back-End Technologies</span><br>Node.js | Java | Python | C | C++</li>
-                            <li><span>Database Management</span><br>Knowledge of both SQL (MySQL | SQLite) and NoSQL databases (MongoDB)</li>
-                            <li><span>Professional Skills</span><br>Teamwork and collaboration | Communication |Documentation | Continuous learning | Time management</li>
-                        </ul>
-                    </div>
-                    <!-- Experience tab -->
-                    <div class="tabContents" id="experience">
-                        <ul>
-                            <li><span>2019-2022: Government Office</span><br>Prime minister's office classified position in which I was responsible for producing an interactive picture for the senior decision-maker.<br>
-                                 The job also included gathering information from other security bodies in times of stress, using advanced technologies. </li>
-                            <li><span>2017-2019: Military Service</span><br>"Unit Outside The Security Forces 1014" classified role in which, among other things, I have been authorized to collect data using advanced systems. </li>
-                        </ul>
-                    </div>
-                    <!-- Education tab -->
-                    <div class="tabContents" id="education">
-                        <ul>
-                            <li><span>2020-2023</span><br>"HIT" - B.Sc, Computer Science </li>
-                            <li><span>2020</span><br>"She Codes; j" - courses, Python and Git</li>
-                            <li><span>2014-2017</span><br>"Mekif Gimel Amit" high school - full matriculation certificate with honors - 5 units in mathematics, English, communication and international relations
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+		<!--About section-->
+		<div id="about">
+			<div class="container aboutContainer">
+				<div class="row">
+					<div class="aboutCol1">
+						<img src="images/karinImages/karinHITRemoveBG.png" alt="karin image in about me section" />
+					</div>
+					<div class="aboutCol2">
+						<h1 class="subTitle">About Me</h1>
+						<p class="aboutParagraph">
+							Hi, I'm Karin Ochayon, a 24-year-old Computer Science graduate from "HIT" with an average
+							grade of 86. I'm deeply passionate about learning new technologies and believe in the power
+							of clean and efficient code. Currently, I'm thriving as a Full-Stack Developer at "Moveo
+							Group," where I collaborate with clients to design and implement customized solutions that
+							meet their unique needs. My proficiency spans across various languages and technologies,
+							enabling me to adapt and innovate effectively. Beyond coding, I find joy in immersing myself
+							in the world of "Friends", catching up with Ross, Rachel, and the gang. And let's not forget
+							about my other love - coffee! It's the fuel that keeps the code flowing and the ideas
+							brewing.
+						</p>
 
-    <!-- Services Section -->
-    <div id="services">
-        <div class="container">
-            <h1 class="subTitle">My Services</h1>
-            <div class="servicesList">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Application Development</h2>
-                    <p>End-to-end web application development services, starting from gathering client requirements, designing user interfaces, developing both front-end and back-end components, integrating APIs and databases, and deploying the application to a hosting environment. This service allows me to handle the entire development process and deliver a fully functional web application to your clients.</p>
-        
-                </div>
-                <div>
-                    <i class="fa-brands fa-android"></i>
-                    <h2>Android App Development</h2>
-                    <p>End-to-end Android app development services, starting from gathering client requirements, designing the user interface, coding the app logic in Java, integrating APIs and databases, conducting thorough testing, and deploying the app to the Google Play Store. I can leverage your expertise in Java programming and Android Studio to create high-quality, feature-rich, and user-friendly Android applications for various purposes, such as productivity tools, e-commerce apps, social networking apps, or custom business solutions.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>Graphic Design; Image & Video Editing</h2>
-                    <p>I excel in graphic design, allowing me to offer services such as logo design, branding, illustrations, and image editing. I can create visually captivating designs that align with your clients' branding guidelines and enhance their digital presence. Additionally, my proficiency in image and video editing enables me to enhance and manipulate visuals to meet specific requirements and deliver high-quality assets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+						<div class="tabTitles">
+							<p class="tabLinks activeLink" onclick="openTab(event, 'skills')">Skills</p>
+							<p class="tabLinks" onclick="openTab(event, 'experience')">Experience</p>
+							<p class="tabLinks" onclick="openTab(event, 'education')">Education</p>
+						</div>
+						<!-- Skills tab -->
+						<div class="tabContents activeTab" id="skills">
+							<ul>
+								<li>
+									<span><b>Front-End Technologies</b></span
+									><br />HTML | CSS | JS | TS | React
+								</li>
+								<li>
+									<span><b>Back-End Technologies</b></span
+									><br />Node.js | Java | Python | C | C++
+								</li>
+								<li>
+									<span><b>Database Management</b></span
+									><br />Knowledge of both SQL (MySQL | SQLite) and NoSQL databases (MongoDB)
+								</li>
+								<li>
+									<span><b>Professional Skills</b></span
+									><br />Teamwork and collaboration | Communication |Documentation | Continuous
+									learning | Time management
+								</li>
+							</ul>
+						</div>
+						<!-- Experience tab -->
+						<div class="tabContents" id="experience">
+							<ul>
+								<li>
+									<span><b>2023-Current: Full-Stack Developer at "Moveo Group"</b></span
+									><br />As a Full-Stack developer in a dynamic projects environment, I collaborate
+									with clients by presenting solutions and designing projects tailored to their needs.
+									I am proficient in various languages and technologies, which I customize to meet the
+									specific requirements and preferences of the client.
+								</li>
+								<li>
+									<span><b>2019-2022: Government Office</b></span
+									><br />Prime minister's office classified position in which I was responsible for
+									producing an interactive picture for the senior decision-maker.<br />
+									The job also included gathering information from other security bodies in times of
+									stress, using advanced technologies.
+								</li>
+								<li>
+									<span><b>2017-2019: Military Service</b></span
+									><br />"Unit Outside The Security Forces 1014" classified role in which, among other
+									things, I have been authorized to collect data using advanced systems.
+								</li>
+							</ul>
+						</div>
+						<!-- Education tab -->
+						<div class="tabContents" id="education">
+							<ul>
+								<li>
+									<span><b>2020-2023</b></span
+									><br />"HIT" - B.Sc, Computer Science
+								</li>
+								<li>
+									<span><b>2020</b></span
+									><br />"She Codes;" - courses, Python and Git
+								</li>
+								<li>
+									<span><b>2014-2017</b></span
+									><br />"Mekif Gimel Amit" high school - full matriculation certificate with honors -
+									5 units in mathematics, English, communication and international relations
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Portfolio Section -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="subTitle">My Portfolio</h1>
-            <div class="portfolioList">
-                <div class="work">
-                    <img src="images/projectsImages/theCookBookProject.png">
-                    <div class="layer">
-                        <h3>"The Cook Book" - Android App</h3>
-                        <p>
-                            The purpose of the application is to provide users with access to a collection of recipes. This collection includes both a set of home recipes, which are taken from a Recipes API, and the ability for each user to upload their own unique recipes!
-                            The application also provides a user-friendly interface for users to browse and search for recipes, as well as the ability to mark recipes as favorites for quick access later on.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/TheCookBook"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/amuseumMeProject.png">
-                    <div class="layer">
-                        <h3>"Amuseum Me" - Web Application</h3>
-                        <p>
-                            The purpose of the application is to provide users with the possability to search museams on a map with smart filtering. In this project I flavored a map (google maps api), and allowed the user to search and filter museums according to category, radius, city, price, rating, area, weekends opening and by specific name!
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/museumsApp"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/chitChatProject.png">
-                    <div class="layer">
-                        <h3>"Chit Chat" - Java Desktop Application</h3>
-                        <p>
-                            A TCP/IP based Client-Server application that allows multiple clients to chat with each other.
-                             It provides a user-friendly GUI developed in Java Swing.
-                             In this project there is an implmentation of several design patterns such as - proxy, observer, state, command, ityerator and composite.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/ChitChatClient"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/spentItRightProject.png">
-                    <div class="layer">
-                        <h3>"Spent It Right" - Web Application</h3>
-                        <p>
-                            In this project I allow the user to manage his expenses in a smart and orderly way.
-                            Each user can enter information about items he purchased - such as: item name, item description, item price, item category, item purchase date, and more.
-                            The information is saved in "localStorage".
-                            Each user can issue an expense report by year and month.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/CostsManagerWebApp"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/sudokuProject.png">
-                    <div class="layer">
-                        <h3>"Sudoku That Solves Itself" - JavaFX Desktop Application</h3>
-                        <p>
-                            This application is developed in a client-server architecture.
-                            The application utilizes the Strategy design pattern to solve Sudoku puzzles by employing two distinct algorithms. The selection of the algorithm is made randomly. 
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/SudokuClient"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/ticTacToeProject.png">
-                    <div class="layer">
-                        <h3>"Tic Tac Toe Game" - Python Desktop Application</h3>
-                        <p>
-                            The Tic Tac Toe game is a Python project that utilizes the tkinter library for the graphical user interface. It provides an interactive and enjoyable gaming experience, allowing players to engage in the classic game of Tic Tac Toe.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/TicTacToe"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/babyDriverProject.png">
-                    <div class="layer">
-                        <h3>"Baby Driver" - AI-Driven Python Project</h3>
-                        <p>
-                            Designed to predict car prices based on technical specifications and characteristics. Leveraging machine learning algorithms, it offers accurate estimations, aiding buyers and sellers in making informed decisions. With its intuitive interface and robust prediction capabilities, it serves as a valuable tool in the automotive market.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/BabyDriverProject"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/toDoProject.png">
-                    <div class="layer">
-                        <h3>"To Do" - React Application</h3>
-                        <p>
-                            A sleek and intuitive React application designed to help users efficiently manage their tasks and to-do lists. With its user-friendly interface and interactive features, it allows users to easily add, update, and mark tasks as completed. The app promotes productivity and organization, making it an essential tool for individuals seeking an efficient task management solution.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/ToDoApp"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/projectsImages/costManagerRESTfulWebServicesProject.png">
-                    <div class="layer">
-                        <h3>"Cost Manager RESTful Web Services" - Node.js Project</h3>
-                        <p>
-                            A RESTful web service, it provides a robust platform for managing costs and expenses efficiently. With its RESTful architecture, users can easily perform CRUD operations on cost entries, retrieve insightful reports, and track their financial data with ease. The project offers a secure and scalable solution for effective cost management.
-                        </p>
-                        <a href="https://github.com/KarinOchayon070/CostManagerREStfulWebServices"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+		<!-- Services Section -->
+		<div id="services">
+			<div class="container">
+				<h1 class="subTitle">My Services</h1>
+				<div class="servicesList">
+					<div>
+						<i class="fa-solid fa-code"></i>
+						<h2>Web Application Development</h2>
+						<p>
+							End-to-end web application development services, starting from gathering client
+							requirements, designing user interfaces, developing both front-end and back-end components,
+							integrating APIs and databases, and deploying the application to a hosting environment. This
+							service allows me to handle the entire development process and deliver a fully functional
+							web application to your clients.
+						</p>
+					</div>
+					<div>
+						<i class="fa-brands fa-android"></i>
+						<h2>Android App Development</h2>
+						<p>
+							End-to-end Android app development services, starting from gathering client requirements,
+							designing the user interface, coding the app logic in Java, integrating APIs and databases,
+							conducting thorough testing, and deploying the app to the Google Play Store. I can leverage
+							your expertise in Java programming and Android Studio to create high-quality, feature-rich,
+							and user-friendly Android applications for various purposes, such as productivity tools,
+							e-commerce apps, social networking apps, or custom business solutions.
+						</p>
+					</div>
+					<div>
+						<i class="fa-solid fa-crop"></i>
+						<h2>Graphic Design; Image & Video Editing</h2>
+						<p>
+							I excel in graphic design, allowing me to offer services such as logo design, branding,
+							illustrations, and image editing. I can create visually captivating designs that align with
+							your clients' branding guidelines and enhance their digital presence. Additionally, my
+							proficiency in image and video editing enables me to enhance and manipulate visuals to meet
+							specific requirements and deliver high-quality assets.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Contact Section -->
-    <div id="contact">
-        <div class="container">
-            <div class="row contactContainer">
-                <div class="contactLeft">
-                    <h1 class="subTitle">Contact Me</h1>
-                    <p>
-                        <a href="mailto:karinoch070@gmail.com">
-                          <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <a href="mailto:karinoch070@gmail.com">karinoch070@gmail.com</a>
-                      </p>
-                      
-                    <p>
-                        <a href="tel:052-738-7377">
-                          <i class="fa-solid fa-phone"></i>
-                        </a>
-                        <a href="tel:052-738-7377">052-738-7377</a>
-                      </p>
-                    <div class="socialIcons">
-                        <a href="https://github.com/KarinOchayon070"><i class="fa-brands fa-square-github"></i></a>
-                        <a href="https://www.linkedin.com/in/karin-ochayon-%D7%A7%D7%90%D7%A8%D7%99%D7%9F-%D7%90%D7%95%D7%97%D7%99%D7%95%D7%9F-873785201/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/channel/UCB9kY-eCAMy0yonJmgCUU2Q"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                    <audio id="audio" src="yaySoundEffect.mp3"></audio>
-                    <a href="KarinOchayonCV.docx" download class="button" onclick="playAudio()">Download My CV</a>
-                </div>
-                <div class="contactRight">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows=6 placeholder="Your Message"></textarea>
-                        <button type="submit" class="button formButton">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
+		<!-- Portfolio Section -->
+		<div id="portfolio">
+			<div class="container">
+				<h1 class="subTitle">My Portfolio</h1>
+				<div class="portfolioList">
+					<div class="work">
+						<img src="images/projectsImages/theCookBookProject.png" />
+						<div class="layer">
+							<h3>"The Cook Book" - Android App</h3>
+							<p>
+								The purpose of the application is to provide users with access to a collection of
+								recipes. This collection includes both a set of home recipes, which are taken from a
+								Recipes API, and the ability for each user to upload their own unique recipes! The
+								application also provides a user-friendly interface for users to browse and search for
+								recipes, as well as the ability to mark recipes as favorites for quick access later on.
+							</p>
+							<a href="https://github.com/KarinOchayon070/TheCookBook"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/amuseumMeProject.png" />
+						<div class="layer">
+							<h3>"Amuseum Me" - Web Application</h3>
+							<p>
+								The purpose of the application is to provide users with the possability to search
+								museams on a map with smart filtering. In this project I flavored a map (google maps
+								api), and allowed the user to search and filter museums according to category, radius,
+								city, price, rating, area, weekends opening and by specific name!
+							</p>
+							<a href="https://github.com/KarinOchayon070/museumsApp"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/chitChatProject.png" />
+						<div class="layer">
+							<h3>"Chit Chat" - Java Desktop Application</h3>
+							<p>
+								A TCP/IP based Client-Server application that allows multiple clients to chat with each
+								other. It provides a user-friendly GUI developed in Java Swing. In this project there is
+								an implmentation of several design patterns such as - proxy, observer, state, command,
+								ityerator and composite.
+							</p>
+							<a href="https://github.com/KarinOchayon070/ChitChatClient"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/spentItRightProject.png" />
+						<div class="layer">
+							<h3>"Spent It Right" - Web Application</h3>
+							<p>
+								In this project I allow the user to manage his expenses in a smart and orderly way. Each
+								user can enter information about items he purchased - such as: item name, item
+								description, item price, item category, item purchase date, and more. The information is
+								saved in "localStorage". Each user can issue an expense report by year and month.
+							</p>
+							<a href="https://github.com/KarinOchayon070/CostsManagerWebApp"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/sudokuProject.png" />
+						<div class="layer">
+							<h3>"Sudoku That Solves Itself" - JavaFX Desktop Application</h3>
+							<p>
+								This application is developed in a client-server architecture. The application utilizes
+								the Strategy design pattern to solve Sudoku puzzles by employing two distinct
+								algorithms. The selection of the algorithm is made randomly.
+							</p>
+							<a href="https://github.com/KarinOchayon070/SudokuClient"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/ticTacToeProject.png" />
+						<div class="layer">
+							<h3>"Tic Tac Toe Game" - Python Desktop Application</h3>
+							<p>
+								The Tic Tac Toe game is a Python project that utilizes the tkinter library for the
+								graphical user interface. It provides an interactive and enjoyable gaming experience,
+								allowing players to engage in the classic game of Tic Tac Toe.
+							</p>
+							<a href="https://github.com/KarinOchayon070/TicTacToe"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/babyDriverProject.png" />
+						<div class="layer">
+							<h3>"Baby Driver" - AI-Driven Python Project</h3>
+							<p>
+								Designed to predict car prices based on technical specifications and characteristics.
+								Leveraging machine learning algorithms, it offers accurate estimations, aiding buyers
+								and sellers in making informed decisions. With its intuitive interface and robust
+								prediction capabilities, it serves as a valuable tool in the automotive market.
+							</p>
+							<a href="https://github.com/KarinOchayon070/BabyDriverProject"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/toDoProject.png" />
+						<div class="layer">
+							<h3>"To Do" - React Application</h3>
+							<p>
+								A sleek and intuitive React application designed to help users efficiently manage their
+								tasks and to-do lists. With its user-friendly interface and interactive features, it
+								allows users to easily add, update, and mark tasks as completed. The app promotes
+								productivity and organization, making it an essential tool for individuals seeking an
+								efficient task management solution.
+							</p>
+							<a href="https://github.com/KarinOchayon070/ToDoApp"><i class="fa-brands fa-github"></i></a>
+						</div>
+					</div>
+					<div class="work">
+						<img src="images/projectsImages/costManagerRESTfulWebServicesProject.png" />
+						<div class="layer">
+							<h3>"Cost Manager RESTful Web Services" - Node.js Project</h3>
+							<p>
+								A RESTful web service, it provides a robust platform for managing costs and expenses
+								efficiently. With its RESTful architecture, users can easily perform CRUD operations on
+								cost entries, retrieve insightful reports, and track their financial data with ease. The
+								project offers a secure and scalable solution for effective cost management.
+							</p>
+							<a href="https://github.com/KarinOchayon070/CostManagerREStfulWebServices"
+								><i class="fa-brands fa-github"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>Ⓒ Karin Ochayon, <span id="currentYear"></span></p>
-    </footer>
-    <script src="app.js"></script>
+		<!-- Contact Section -->
+		<div id="contact">
+			<div class="container">
+				<div class="row contactContainer">
+					<div class="contactLeft">
+						<h1 class="subTitle">Contact Me</h1>
+						<p>
+							<a href="mailto:karinoch070@gmail.com">
+								<i class="fa-solid fa-envelope"></i>
+							</a>
+							<a href="mailto:karinoch070@gmail.com">karinoch070@gmail.com</a>
+						</p>
 
-</body>
+						<p>
+							<a href="tel:052-738-7377">
+								<i class="fa-solid fa-phone"></i>
+							</a>
+							<a href="tel:052-738-7377">052-738-7377</a>
+						</p>
+						<div class="socialIcons">
+							<a href="https://github.com/KarinOchayon070"><i class="fa-brands fa-square-github"></i></a>
+							<a
+								href="https://www.linkedin.com/in/karin-ochayon-%D7%A7%D7%90%D7%A8%D7%99%D7%9F-%D7%90%D7%95%D7%97%D7%99%D7%95%D7%9F-873785201/"
+								><i class="fa-brands fa-linkedin"></i
+							></a>
+							<a href="https://www.youtube.com/channel/UCB9kY-eCAMy0yonJmgCUU2Q"
+								><i class="fa-brands fa-youtube"></i
+							></a>
+						</div>
+						<audio id="audio" src="yaySoundEffect.mp3"></audio>
+						<a href="KarinOchayonCV.docx" download class="button" onclick="playAudio()">Download My CV</a>
+					</div>
+					<div class="contactRight">
+						<form name="submit-to-google-sheet">
+							<input type="text" name="Name" placeholder="Your Name" required />
+							<input type="email" name="Email" placeholder="Your Email" required />
+							<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+							<button type="submit" class="button formButton">Submit</button>
+						</form>
+						<span id="msg"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer Section -->
+		<footer>
+			<p>Ⓒ Karin Ochayon, <span id="currentYear"></span></p>
+		</footer>
+		<script src="app.js"></script>
+	</body>
 </html>
-
-
